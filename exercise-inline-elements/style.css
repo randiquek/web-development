@@ -1,0 +1,44 @@
+body {
+    background-image: url("images/lich.webp");
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: sans-serif;
+    max-width: 960px;
+    margin:auto;
+}
+
+header {
+    background-image: url("images/banner.jpg");
+}
+
+h1 {
+    color: blueviolet;
+    text-shadow: 5px 5px 5px #000000;
+    font-size: 36px;
+}
+
+div {
+    color: white;
+    border: 3px solid goldenrod;
+    background-color: black;
+    opacity: 0.8;
+}
+
+img {
+    width: 400px;
+    border: 3px solid goldenrod;
+}
+
+p {
+    
+}
+
+ul {
+    list-style: none ;
+    color: white;
+}
+
+a {
+    color: white;
+}
