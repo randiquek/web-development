@@ -1,0 +1,83 @@
+
+/* Fonts */
+
+html {
+    font-family: Arial, sans-serif;
+    
+}
+
+/* section {
+    font-family: Trebuchet MS, Arial, sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 18px;
+    text-transform: full-width;
+    text-decoration: underline;
+} */
+
+.styled-text {
+    font-style: italic;
+    font-size: 18px;
+}
+
+.layout-text {
+    text-align: center;
+    line-height: 1.5;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+header h1 {
+    font-family: "Press Start 2P", serif;
+}
+
+.bonus {
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    text-indent: 10%;
+    /* writing-mode: vertical-rl;
+    text-orientation: mixed; */
+}
+
+/* Lists */
+
+ul.styled-list {
+    list-style-position: inside;
+    list-style-image: url("../images/icons8-space-invaders-48.png");
+    line-height: 2;
+}
+
+ol.styled-list {
+    list-style: lower-roman;
+}
+
+/* Images and Links */
+
+.custom-link {
+    color: pink;
+    text-decoration: none;
+}
+
+.custom-link:active {
+    color: red;
+}
+
+.custom-link:hover {
+    color: rgb(0, 255, 115);
+}
+
+.custom-link:visited {
+    color: rgb(0, 179, 255);
+}
+
+.image-frame {
+    width: 300px;
+    border: 3px solid gray;
+    padding: 15px;
+}
+
+.image-frame img{
+    width: 100%;
+}

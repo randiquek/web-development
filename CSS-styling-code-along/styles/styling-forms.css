@@ -1,0 +1,66 @@
+
+/* Rest the form before styling it */
+
+button, 
+input, 
+select,
+textarea {
+    font-family: inherit;
+    font: 100;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    overflow: auto;
+    outline: none;
+}
+
+/* Styling the form */
+
+form {
+    max-width: 500px;
+    padding: 20px;
+    font-size: 13px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+label {
+    width: 25%;
+    display: inline-block;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 70%;
+    border: 1px solid #c2c2c2;
+    border-radius: 3px;
+    padding: 7px;
+    box-shadow: 1px 3px 4px#ebebeb;
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+.submit-row button {
+    border: none;
+    background-color: #ff8500;
+    padding: 8px;
+    color: white;
+    border-radius: 3px;
+    box-shadow: 1px 3px 4px #DADADA;
+
+}
+
+.submit-row {
+    text-align: center;
+}
+
+button:hover {
+    background: #ea7b00;
+    
+}
+
+input[type="text"]:focus, input[type="email"]:focus, select:focus, textarea:focus {
+    border: 1px solid green;
+}
