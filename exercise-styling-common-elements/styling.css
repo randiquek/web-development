@@ -1,0 +1,82 @@
+html {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+ul.navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+ul.navigation li {
+   display: inline;
+   margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: rebeccapurple;
+}
+
+a:hover {
+    color: goldenrod;
+}
+
+a:visited {
+    color: rgb(88, 181, 221);
+}
+
+a:active {
+    color: blue;
+}
+
+a:focus {
+    color: bisque;
+}
+
+.image-frame img{
+    width: 100%;
+    border: 2px solid gold;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+body {
+    background-color: grey;
+}
+
+section {
+    border: 1px solid gold;
+    background-color: rgb(197, 129, 197);
+    margin: 10px;
+    padding: 10px;
+}
+
+.italicized {
+    font-style: italic;
+}
+
+p {
+    line-height: 2;
+    word-spacing: 3px;
+    text-indent: 5%;
+    font-weight: 600;
+
+}
+
+ol.likes {
+    list-style: upper-roman;
+    line-height: 2;
+}
+
+ul.other-facts {
+    list-style: url("cat1.png");
+}
