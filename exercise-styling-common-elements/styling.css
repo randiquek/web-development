@@ -42,6 +42,11 @@ a:focus {
     color: bisque;
 }
 
+.image-frame {
+    width: 500px;
+    padding: 15px;
+}
+
 .image-frame img{
     width: 100%;
     border: 2px solid gold;
