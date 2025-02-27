@@ -1,0 +1,35 @@
+body {
+    background-image: url("https://imageshack.com/i/pmPukT14j");
+    background-size: 1600px, cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-family: 'Sacramento', cursive;
+    background-color: #660000;
+    color: #ffe4c4 !important;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 80px !important;
+    margin: 60px 0 0 0;
+    padding: 50px;
+    text-shadow: 0px 6px 6px black;
+}
+.about {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    color: blanchedalmond;
+
+}
+
+img {
+    width: 300px;
+    height: auto;
+}
+
+p {
+    display: flex;
+    padding: 10px;
+}
+

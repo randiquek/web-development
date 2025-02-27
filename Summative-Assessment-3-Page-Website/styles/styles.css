@@ -1,0 +1,126 @@
+
+body {
+    font-family: helvetica, sans-serif;
+    margin: 0 auto;
+    max-width: 600px;
+    background-image: url("https://imageshack.com/i/pmPukT14j");
+    background-size: 1600px, cover;
+    background-attachment: fixed;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    background-size: cover;
+    position: relative;
+    margin: 40px 0 40px 0;
+    border-radius: 12px;
+}
+
+h1 {
+    font-family: 'Sacramento', cursive;
+    background-color: #660000;
+    border-radius:  5px;
+    text-align: center;
+    font-size: 90px;
+    color: rgba(255,255,255,1);
+    margin: 60px 0 0 0;
+    padding: 10 0 10 0;
+    text-shadow: 0px 6px 6px black;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    margin: 0 0 70px 0;
+    font-family: 'Josefin Slab', serif;
+    background-color: black;
+    padding: 5px 0 5px 0;
+    border-radius: 5px;
+}
+
+li {
+    font-size: 40px;
+    font-family: 'Sacramento', cursive;
+    color: white;
+    padding: 5px 25px 0 10px;
+    text-shadow: 0 6px 6px black;
+    display: inline;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+    font-size:20px;
+    color: white;
+    opacity: 1;
+    font-family: 'Josefin Slab', serif;
+    background: black;
+    background: linear-gradient(top, rgba(153,0,0,1), rgba(153,0,0,.4));
+    background: -webkit-linear-gradient(top, rgba(153,0,0,1), rgba(0,0,0,.4));
+    background: -moz-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,.4));
+    padding: 10px;
+    line-height: 28px;
+    text-align: justify;
+    position: absolute;
+    height: 40px;
+  
+}
+
+small {
+    visibility: hidden;
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+div:hover small {
+    visibility: visible;
+    
+}    
+
+.first{
+  background-image: url("https://imageshack.com/i/poM7qHnTp");
+  background-position: center;
+}
+.second{
+  background-image: url("https://imageshack.com/i/pngegsF3j");
+  background-position: center;
+}
+.dessert{
+  background-image: url("https://imageshack.com/i/pnl1DNrej");
+  background-position: center;
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 35px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 15px;
+    margin: 0px 0 30px 0;
+    padding: 5px 0  5px 0
+  }
+  li {
+    font-size: 20px;
+    padding: 0 8px 0 8px;
+  }
+  div {
+    margin: 20px 12px 20px 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
