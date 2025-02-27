@@ -26,6 +26,10 @@ li {
     display: inline;
 }
 
+li:hover {
+    color: black;
+}
+
 a {
     text-decoration: none !important;
 }

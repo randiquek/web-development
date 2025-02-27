@@ -49,6 +49,10 @@ li {
     display: inline;
 }
 
+li:hover {
+  color: black;
+}
+
 a {
   text-decoration: none;
 }
@@ -75,13 +79,19 @@ small {
     display: block;
     text-align: center;
     margin-top: 50px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
     
 }
 
 div:hover small {
     visibility: visible;
-    
-}    
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 0px;
+    border-radius: 5px;
+    opacity: 1;
+} 
+
 
 .first{
   background-image: url("https://imageshack.com/i/poM7qHnTp");
