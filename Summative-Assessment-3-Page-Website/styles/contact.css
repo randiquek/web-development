@@ -16,24 +16,6 @@ h1 {
     padding: 50px;
     text-shadow: 0px 6px 6px black;
 }
-.about {
-    display: flex;
-    justify-content: space-evenly;
-    background-color: black;
-    color: blanchedalmond;
-    width: auto;
-
-}
-
-img {
-    width: 300px;
-    height: auto;
-}
-
-p {
-    display: flex;
-    padding: 15px;
-}
 
 li {
     font-size: 40px;
@@ -47,6 +29,24 @@ li {
 a {
     text-decoration: none !important;
 }
+
 nav {
     text-align: center;
 } 
+
+h2 {
+    text-align: center;
+    color: white !important;
+    margin: 0 0 70px 0;
+    font-family: 'Josefin Slab', serif;
+    background-color: black;
+    padding: 5px 0 5px 0;
+    border-radius: 5px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    border: 1px solid gray
+}
