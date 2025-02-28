@@ -111,9 +111,15 @@ console.log(Math.floor(7.8));
 
 console.log(Math.trunc(7.8));
 
+// Bonus Challenge 
 
-console.log(Math.cos(Math.PI))
+let userName = prompt("Please Enter Your Name: ");
+let nameLength = userName.length;
+console.log("Hi there, ", + userName, ". Your name has ", nameLength, " characters.");
 
 // Calculate degrees to radians
-let radians = 45 * (Math.PI/180);
-console.log(radians);
+// let radians = 45 * (Math.PI/180);
+// console.log(radians);
+
+
+// console.log(Math.cos(Math.PI))
