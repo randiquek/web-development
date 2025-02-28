@@ -1,8 +1,10 @@
 body {
     font-family: helvetica, sans-serif;
     background-image: url("https://imageshack.com/i/pmPukT14j");
-    background-size: 1600px, cover;
+    background-size: 2000px, cover;
     background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
 }
 
 h1 {
