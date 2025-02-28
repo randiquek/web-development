@@ -110,7 +110,7 @@ div:hover small {
 .price {
   float: right;
 }
-@media (max-width: 500px) {
+@media (max-width: 480px) {
   h1 {
     font-size: 35px;
     margin-top: 20px;
