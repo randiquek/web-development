@@ -1,3 +1,5 @@
+// change text button
+
 const changeTextBtn = document.getElementById('changeTextBtn');
 
 changeTextBtn,addEventListener('click', function() {
@@ -5,6 +7,7 @@ changeTextBtn,addEventListener('click', function() {
     paragraph.innerHTML = 'The text has been changed!';
 });
 
+// Add a new element button
 const addElementBtn = document.getElementById('addElementBtn');
 
 addElementBtn.addEventListener('click', function() {
@@ -13,6 +16,7 @@ addElementBtn.addEventListener('click', function() {
     document.querySelector('.container').appendChild(newParagraph);
 })
 
+// Remove last element button
 const removeElementBtn = document.createElement('button');
 removeElementBtn.innerHTML = 'Remove Last Element';
 document.querySelector('.container').appendChild(removeElementBtn);

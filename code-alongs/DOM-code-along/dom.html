@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="myElement">
+        <strong>Bold text!</strong>
+    </div>
+
+    <script>
+        let element = document.getElementById("myElement");
+        console.log(element.innerHTML);
+        console.log(element.innerText);
+
+        element.innerHTML = "<p> This is a paragraph</p>";
+    </script>
+    <!-- <p id="myElement">Original Text</p>
+    <p id="hidden" style="display: none;">Some hidden text</p>
+    <button onclick="changeText()">Change Text</button>
+
+    <script>
+
+        function changeText() {
+            let element = document.getElementById("myElement");
+            element.innerText = "This is something different!";
+            console.log(element.innerText);
+        }
+
+        let element = document.getElementById("myElement");
+        console.log(element.innerText);
+
+        let hiddenElement = document.getElementById("hidden");
+        console.log(hiddenElement.innerText);
+        console.log(hiddenElement.textContent);
+    </script> -->
+</body>
+</html>
