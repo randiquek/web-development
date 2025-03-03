@@ -47,3 +47,25 @@ let fruits2 = ["fig", "grape", "honeydew"];
 fruits = fruits.concat(fruits2);
 
 console.log("The new list of fruits is now: ", fruits);
+
+// Bonus Challenge: Finding the Most Frequent Element
+
+let randomNumbers = [1, 3, 2, 5, 4, 2, 1, 4, 3, 1]; // I could also have it random generate numbers for this array
+let count = [0,0,0,0,0];
+
+for(let i = 0; i < randomNumbers.length; i++) {
+    let number = randomNumbers[i];
+    count[number - 1]++;
+}
+let maxCount = 0;
+let mostFrequentElement;
+
+for(let i = 0; i <count.length; i++) {
+    if(count[i] > maxCount) {
+        maxCount = count[i]
+        mostFrequentElement = i + 1;
+    }
+}
+ console.log("The most freuqent number is:", mostFrequentElement);
+    
+
