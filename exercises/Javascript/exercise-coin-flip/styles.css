@@ -9,6 +9,7 @@ div.game-window {
     align-items: center;
     flex-direction: column;
     background-color: rgb(9, 138, 30);
+    box-shadow: 5px 5px 10px rgb(29, 26, 26);
     width: 50%;
     height: 300px;
     margin: 50px;
@@ -17,8 +18,13 @@ div.game-window {
 
 h1 {
     color: rgb(0, 0, 0);
+    font-family: 'Press Start 2P', sans-serif;
 }
 
 p {
     color:rgb(0, 0, 0);
+}
+
+#button {
+    display: flex;
 }
