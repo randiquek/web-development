@@ -58,3 +58,7 @@ console.log(cup3.material);
 
 cup3.material = 'wood';
 console.log(cup2.material);
+
+// convert object to JSON
+let catJSON = JSON.stringify(cat);
+console.log(catJSON)
