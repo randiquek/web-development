@@ -47,7 +47,7 @@ export default function Body() {
             <ol>
                 {games.map((game) => (
                     <Game name={game.name} developer={game.developer}/>
-                    ))};
+                    ))}
             </ol>
         </div>
 
