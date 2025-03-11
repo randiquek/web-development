@@ -16,28 +16,29 @@ export default function TaskForm({dispatch}) {
         setDescription('');
         setImpact('');
         setEffort('');
-        setPriority('');
+
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
     
-        let priority = "";
+        let priority = 0;
         if (impact === "1" && effort === "1"){
-           priority = "3";
+           priority = 3;
         }
         if (impact === "2" && effort === "1"){
-            priority = "1";
+            priority = 1;
         }
         if (impact === "1" && effort === "2"){
-            priority = "4";
+            priority = 4;
         }
         if (impact === "2" && effort === "2"){
-            priority = "2";
+            priority = 2;
         }
     
         const taskData = {
-            id: new Date().toISOString(),
+            id: crypto.randomUUID(),
+            date: new Date().toISOString().slice(0, 19),
             title,
             description,
             priority
@@ -52,13 +53,15 @@ export default function TaskForm({dispatch}) {
         <form className="task-form">
             <div>
                 <label>Title</label>
-                <input type="text" />
+                
+                <input value={title}
+                onChange={(e) => setTitle(e.target.value)} type="text" />
             </div>
             <div>
                 <label>Description</label>
                 <textarea 
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
                 ></textarea>
             </div>
             <div className="priority-container">

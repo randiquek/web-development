@@ -23,6 +23,11 @@ body {
   top: 10px;
   right: 10px;
 }
+.creation-date {
+  color: #999;
+  font-size: 0.8em;
+  text-align: right;
+}
 .priority-proceed{
   background-color: green;
 }
@@ -92,4 +97,9 @@ input {
 .task-item {
   padding: 10px;
   border: 1px solid #ccc
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
 }
