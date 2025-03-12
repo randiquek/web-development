@@ -13,7 +13,6 @@ import java.util.UUID;
 @Table(name = "Task")
 public class Task {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
     UUID id;
     String title;
     String description;

@@ -3,42 +3,22 @@ import Game from './Game'
 import '../App.css'
 
 export default function Body() {
+  const [games, setGames] = useState([]);
 
-    const [games, setGames] = useState([]);  
+  useEffect(() => {
 
-    useEffect(() => {setGames([
-            {
-              "name": "World of Warcraft",
-              "releaseYear": 2021,
-              "developer": "Blizzard Entertainment",
-              "genre": "MMORPG"  
-            },
-            {
-              "name": "Gauntlet Legends",
-              "releaseYear": 1998,
-              "developer": "Atari Games",
-              "genre": "Hack and Slash",
-            },
-            {
-              "name": "Heroes of the Storm",
-              "releaseYear": 2015,
-              "developer": "Blizzard Entertainment",
-              "genre": "MOBA"
-            },  
-            {
-              "name": "Assassin's Creed Origins",
-              "releaseYear": 2017,
-              "developer": "Ubisoft Montreal",
-              "genre": "RPG"   
-            },
-            {
-              "name": "Super Metroid",
-              "releaseYear": 1994,
-              "developer": "Nintendo", 
-              "genre": "Metroidvania"  
-            }
-        ]);
-    }, [])
+    fetch("http://localhost:8080/games",
+        {
+          method: "GET",
+          headers: {"Content-Type": "application/json"},
+        }).then(response => response.json())
+        .then((data) => {
+          console.log(data);
+          setGames(data);
+        })
+
+
+}, []);
 
     return (
         <div>
@@ -46,7 +26,7 @@ export default function Body() {
 
             <ol>
                 {games.map((game) => (
-                    <Game name={game.name} developer={game.developer}/>
+                    <Game key={game.id} name={game.name} developer={game.developer}/>
                     ))}
             </ol>
         </div>

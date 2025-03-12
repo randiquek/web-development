@@ -20,7 +20,7 @@ function App() {
           }).then(response => response.json())
           .then((data) => {
             console.log(data);
-            dispatch({type: "ADD_TASKS", payload: data})
+            dispatch({type: "INIT_TASKS", payload: data})
           })
 
 

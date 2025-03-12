@@ -43,9 +43,16 @@ export default function TaskForm({dispatch}) {
             description,
             priority
         }
-        dispatch({type: "ADD_TASK", payload: taskData});
-        console.log(taskData);
-        clearForm();
+
+        fetch("http://localhost:8080/tasks", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(taskData)
+        }).then(response => response.json())
+        .then((data) => {
+            dispatch({type: "ADD_TASK", payload: data});
+            clearForm();
+        });
     }
 
     return (

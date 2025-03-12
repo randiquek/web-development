@@ -10,6 +10,17 @@ export default function TaskItem({task, dispatch}) {
         3: "priority-consider",
         4: "priority-avoid"
     }
+    const handleDelete = (e) => {
+        e.preventDefault();
+        fetch("http://localhost:8080/tasks/" + id, {
+            method: "DELETE",
+            headers: {"Content-Type" : "application/json"},
+        })
+        .then(response => response.json())
+        .then(() => {
+        });
+        dispatch({type: "DELETE_TASK", payload: id});
+    }
 
     return (
         <div className="task-item">
@@ -21,7 +32,7 @@ export default function TaskItem({task, dispatch}) {
             </div>
             <h3>{title}</h3>
             <p>{description}</p>
-            <button onClick={() => dispatchEvent({type: 'DELETE_TASK', payload: id})}>Delete</button>
+            <button onClick={handleDelete}>Delete</button>
 
         </div>
 
