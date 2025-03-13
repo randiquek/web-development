@@ -11,6 +11,13 @@ create table game (
     ranking int not null
 );
 
+create table user (
+	id varchar(128) primary key,
+    username varchar(128) not null,
+    password varchar(128) not null,
+    authority varchar(50) not null
+);
+
 INSERT INTO game (id, name, release_year, developer, genre, ranking) VALUES
 (1, "World of Warcraft", 2021, "Blizzard Entertainment", "MMORPG", 1),
 (2, "Gauntlet Legends", 1998, "Atari Games", "Hack and Slash", 4),
@@ -18,4 +25,6 @@ INSERT INTO game (id, name, release_year, developer, genre, ranking) VALUES
 (4, "Assassin's Creed Origins", 2017, "Ubisoft Montreal", "RPG", 2),
 (5, "Super Metroid", 1994, "Nintendo", "Metroidvania", 5);
 
+INSERT INTO user (id, username, password, authority) VALUES
+(UUID() , "admin", "password", "ADMIN");
 
