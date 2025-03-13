@@ -1,6 +1,11 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
+import { postTask } from '../utilities/apiUtilities';
+import ThemeContext from '../context/ThemeContext';
+import { ThemeProvider } from '../context/ThemeProvider';
 
 export default function TaskForm({dispatch}) {
+
+    const {theme, toggleTheme} = useContext(ThemeContext);
 
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
@@ -44,12 +49,7 @@ export default function TaskForm({dispatch}) {
             priority
         }
 
-        fetch("http://localhost:8080/tasks", {
-            method: "POST",
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify(taskData)
-        }).then(response => response.json())
-        .then((data) => {
+        postTask(taskData).then((data) => {
             dispatch({type: "ADD_TASK", payload: data});
             clearForm();
         });
@@ -58,6 +58,10 @@ export default function TaskForm({dispatch}) {
     return (
 
         <form className="task-form">
+            <div>
+                <p>Current Theme: {theme}</p>
+                <button onClick={(e) => toggleTheme(e)}>Toggle Theme</button>
+            </div>
             <div>
                 <label>Title</label>
                 

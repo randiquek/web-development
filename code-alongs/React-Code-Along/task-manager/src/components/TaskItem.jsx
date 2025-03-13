@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { deleteTask } from "../utilities/apiUtilities";
+import UserContext from '../context/UserContext';
 
 
 export default function TaskItem({task, dispatch}) {
     const {id, date, priority, title, description} = task;
+
+    const {username, isAdmin} = useContext(UserContext);
 
     const priorityClass = {
         1: "priority-proceed",
@@ -12,15 +16,12 @@ export default function TaskItem({task, dispatch}) {
     }
     const handleDelete = (e) => {
         e.preventDefault();
-        fetch("http://localhost:8080/tasks/" + id, {
-            method: "DELETE",
-            headers: {"Content-Type" : "application/json"},
-        })
-        .then(response => response.json())
-        .then(() => {
-        });
+        if(deleteTask(id)) {
         dispatch({type: "DELETE_TASK", payload: id});
-    }
+        } else {
+            console.log("Error deleting task");
+        }
+    };
 
     return (
         <div className="task-item">
@@ -32,7 +33,7 @@ export default function TaskItem({task, dispatch}) {
             </div>
             <h3>{title}</h3>
             <p>{description}</p>
-            <button onClick={handleDelete}>Delete</button>
+            {isAdmin && <button onClick={handleDelete}>Delete</button>}
 
         </div>
 

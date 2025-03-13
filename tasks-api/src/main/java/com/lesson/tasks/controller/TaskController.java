@@ -25,6 +25,16 @@ public class TaskController implements Serializable {
         return taskRepository.findAll();
     }
 
+    @GetMapping("/priority/{priority}")
+    public List<Task> getTasksByPriority(@PathVariable int priority) {
+        return taskRepository.findByPriority(priority);
+    }
+
+    @GetMapping("/{id}")
+    public Task getTask(@PathVariable UUID id) {
+        return taskRepository.findById(id).get();
+    }
+
     @PostMapping
     public Task addTask(@RequestBody Task task) {
         System.out.println(task);

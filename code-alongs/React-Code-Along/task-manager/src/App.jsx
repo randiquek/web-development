@@ -1,26 +1,32 @@
-import React, {useReducer, useState, useEffect} from 'react'
+import React, {useReducer, useState, useEffect, useContext} from 'react'
 import './App.css'
 import taskReducer from './reducers/taskReducer'
 import TaskForm from './components/TaskForm'
 import TaskList from './components/TaskList'
 import { sortTasks } from './utilities/sortingUtility'
+import {getTasks} from './utilities/apiUtilities'
+
+import UserContext from './context/UserContext'
+import ThemeContext from './context/ThemeContext'
+import { ThemeProvider } from './context/ThemeProvider'
 
 function App() {
     const initialState = {tasks: [], sortPreference: "high to low"};
     const [state, dispatch] = useReducer(taskReducer, initialState)  
     const sortedTasks = sortTasks(state.tasks, state.sortPreference);
 
+    const {theme, toggleTheme} = useContext(ThemeContext);
+
+    const userInfo = {
+      username: "Randi",
+      isAdmin: true,
+    }
   
   useEffect(() => {
 
-      fetch("http://localhost:8080/tasks",
-          {
-            method: "GET",
-            headers: {"Content-Type": "application/json"},
-          }).then(response => response.json())
-          .then((data) => {
-            console.log(data);
-            dispatch({type: "INIT_TASKS", payload: data})
+          getTasks().then((data) => {
+          console.log(data);
+          dispatch({type: "INIT_TASKS", payload: data})
           })
 
 
@@ -28,6 +34,8 @@ function App() {
 
   
   return (
+    <ThemeProvider>
+    <UserContext.Provider value={userInfo}>
     <div className="App">
       <div className="container">
 
@@ -49,6 +57,8 @@ function App() {
        
       </div>
     </div>
+    </UserContext.Provider>
+    </ThemeProvider>
   )
 }
 
