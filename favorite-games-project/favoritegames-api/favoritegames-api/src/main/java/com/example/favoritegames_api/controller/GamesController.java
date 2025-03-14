@@ -13,7 +13,6 @@ import java.io.Serializable;
 import java.util.List;
 
 @RestController
-@CrossOrigin
 @RequestMapping("/games")
 public class GamesController implements Serializable {
     @Autowired

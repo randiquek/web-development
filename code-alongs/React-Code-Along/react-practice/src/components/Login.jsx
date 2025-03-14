@@ -5,17 +5,25 @@ import { useNavigate } from "react-router-dom";
 
 
 export default function Login() {
-
+    const {validateLogin} = useContext(UserContext);
 
     const navigate = useNavigate();
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [showError, setShowError] = useState(false);
 
-
-
-
-
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        validateLogin(username, password)
+            .then(() => {
+                setShowError(false);
+                navigate("/");
+            })
+            .catch(() => {
+                setShowError(true);
+        });
+    };
 
 
     return (
@@ -33,5 +41,5 @@ export default function Login() {
             <button onClick={handleSubmit}>Login</button>
 
         </form>
-    )
+    );
 }

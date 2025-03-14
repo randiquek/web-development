@@ -26,7 +26,7 @@ export default function Body() {
 
             <ol>
                 {games.map((game) => (
-                    <Game key={game.id} name={game.name} developer={game.developer}/>
+                    <Game key={game.id} name={game.name} developer={game.developer} releaseYear={game.releaseYear} genre={game.genre}/>
                     ))}
             </ol>
         </div>
